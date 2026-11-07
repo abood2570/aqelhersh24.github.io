@@ -1,0 +1,59 @@
+
+
+<html>
+<head>
+<title>Contact Me - 182504</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#eef3fa">
+
+<div class="top">
+<a href="index.html">Home</a>
+<a href="contact.html">Contact Me</a>
+</div>
+
+<br>
+
+<h2 align="center">Contact Me</h2>
+
+<form id="f" onsubmit="return checkForm()">
+
+<p>Full Name:<br>
+<input type="text" id="n" size="35"></p>
+
+<p>Email Address:<br>
+<input type="text" id="e" size="35"></p>
+
+<p>Country:<br>
+<input type="text" id="c" size="35"></p>
+
+<p>Comments:<br>
+<textarea id="com" rows="5" cols="40"></textarea></p>
+
+<input type="submit" value="Submit">
+
+</form>
+
+<hr width="80%">
+<center><font size="2">Abdullah Qassem Elhersh &copy; 2026</font></center>
+
+<script>
+function checkForm() {
+  var n = document.getElementById("n").value;
+  var e = document.getElementById("e").value;
+  var c = document.getElementById("c").value;
+  var com = document.getElementById("com").value;
+
+  if (n == "" || e == "" || c == "" || com == "") {
+    alert("Please fill all fields");
+    return false;
+  }
+
+  alert("Your message was sent successfully, thank you!");
+  document.getElementById("f").reset();
+  return false;
+}
+</script>
+
+</body>
+</html>
